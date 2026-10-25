@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" font-family="Helvetica, Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="dot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="6" markerHeight="6"><circle cx="3" cy="3" r="2.5" fill="#333"/></marker>
+  </defs>
+  <rect width="1040" height="600" rx="10" fill="#ffffff"/>
+  <text x="24" y="34" font-size="18" font-weight="bold" fill="#1a1a1a">CCTRL wiring overview</text>
+  <text x="24" y="54" fill="#666">Controller PCB rev 0.2. One panel shown; ports B and C are wired the same way.</text>
+
+  <!-- 24 V supply -->
+  <rect x="24" y="250" width="130" height="80" rx="6" fill="#f3f3f3" stroke="#555"/>
+  <text x="89" y="280" text-anchor="middle" font-weight="bold">24 V DC supply</text>
+  <text x="89" y="298" text-anchor="middle" fill="#555">sized for all panels</text>
+  <text x="89" y="314" text-anchor="middle" fill="#555">+ 0.5 A</text>
+  <line x1="154" y1="275" x2="250" y2="275" stroke="#c62828" stroke-width="3"/>
+  <line x1="154" y1="305" x2="250" y2="305" stroke="#222" stroke-width="3"/>
+  <text x="200" y="268" text-anchor="middle" fill="#c62828">+24 V</text>
+  <text x="200" y="324" text-anchor="middle">GND</text>
+
+  <!-- Controller board -->
+  <rect x="250" y="90" width="380" height="440" rx="8" fill="#eef4fb" stroke="#2b5d8f" stroke-width="2"/>
+  <text x="440" y="116" text-anchor="middle" font-weight="bold" font-size="15" fill="#2b5d8f">Controller PCB</text>
+
+  <rect x="262" y="255" width="120" height="70" rx="4" fill="#fff" stroke="#2b5d8f"/>
+  <text x="322" y="276" text-anchor="middle" font-weight="bold">IN-CN1</text>
+  <text x="322" y="293" text-anchor="middle" fill="#555">5.08 mm terminal</text>
+  <text x="322" y="309" text-anchor="middle" fill="#555">ATM fuse ≤ 7.5 A</text>
+
+  <rect x="300" y="140" width="190" height="80" rx="4" fill="#fff" stroke="#2b5d8f"/>
+  <text x="395" y="164" text-anchor="middle" font-weight="bold">ESP32-S3-DevKitC-1</text>
+  <text x="395" y="181" text-anchor="middle" fill="#555">N16R8, socketed</text>
+  <text x="395" y="198" text-anchor="middle" fill="#555">USB-C: flash + console</text>
+
+  <rect x="300" y="400" width="150" height="70" rx="4" fill="#fff" stroke="#2b5d8f"/>
+  <text x="375" y="424" text-anchor="middle" font-weight="bold">MCU-CN1</text>
+  <text x="375" y="441" text-anchor="middle" fill="#555">14-pin display header</text>
+  <text x="375" y="457" text-anchor="middle" fill="#555">pin 14 = +5 V</text>
+
+  <rect x="500" y="255" width="118" height="110" rx="4" fill="#fff" stroke="#2b5d8f"/>
+  <text x="559" y="278" text-anchor="middle" font-weight="bold">PA-CN1</text>
+  <text x="559" y="295" text-anchor="middle" fill="#555">3.81 mm, 3-pin</text>
+  <text x="559" y="311" text-anchor="middle" fill="#555">Nano2 fuse ≤ 3 A</text>
+  <text x="516" y="333" fill="#c62828">1  +24 V</text>
+  <text x="516" y="347" fill="#b26a00">2  Warm −</text>
+  <text x="516" y="361" fill="#1f5fae">3  Cool −</text>
+  <text x="559" y="384" text-anchor="middle" fill="#777">PB-CN1, PC-CN1 alike</text>
+
+  <!-- Display -->
+  <line x1="375" y1="470" x2="375" y2="562" stroke="#555" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="388" y="552" fill="#555">14-wire Dupont harness</text>
+  <text x="388" y="568" fill="#555">board pin N → module pin 15 − N</text>
+  <rect x="40" y="534" width="250" height="56" rx="6" fill="#f3f3f3" stroke="#555"/>
+  <text x="165" y="557" text-anchor="middle" font-weight="bold">MSP3526 display</text>
+  <text x="165" y="575" text-anchor="middle" fill="#555">3.5" ST7796U + FT6336U touch</text>
+  <line x1="290" y1="562" x2="375" y2="562" stroke="#555" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- Panel cable -->
+  <line x1="618" y1="329" x2="700" y2="329" stroke="#c62828" stroke-width="3"/>
+  <line x1="618" y1="343" x2="700" y2="343" stroke="#e08a00" stroke-width="3"/>
+  <line x1="618" y1="357" x2="700" y2="357" stroke="#1f5fae" stroke-width="3"/>
+
+  <rect x="700" y="300" width="80" height="80" rx="40" fill="#fff" stroke="#555" stroke-width="2"/>
+  <text x="740" y="336" text-anchor="middle" font-weight="bold">GX12-3</text>
+  <text x="740" y="352" text-anchor="middle" fill="#555">enclosure</text>
+  <text x="740" y="400" text-anchor="middle" fill="#555">shell not grounded</text>
+
+  <line x1="780" y1="329" x2="850" y2="329" stroke="#c62828" stroke-width="3"/>
+  <line x1="780" y1="343" x2="850" y2="343" stroke="#e08a00" stroke-width="3"/>
+  <line x1="780" y1="357" x2="850" y2="357" stroke="#1f5fae" stroke-width="3"/>
+  <text x="815" y="320" text-anchor="middle" fill="#555">cable</text>
+
+  <!-- Panel -->
+  <rect x="850" y="150" width="166" height="380" rx="8" fill="#fff8ec" stroke="#b26a00" stroke-width="2"/>
+  <text x="933" y="176" text-anchor="middle" font-weight="bold" font-size="15" fill="#8a5300">LED panel</text>
+  <text x="933" y="194" text-anchor="middle" fill="#555">24 V, common anode</text>
+
+  <line x1="870" y1="329" x2="870" y2="230" stroke="#c62828" stroke-width="3"/>
+  <line x1="870" y1="230" x2="970" y2="230" stroke="#c62828" stroke-width="3"/>
+  <line x1="850" y1="329" x2="870" y2="329" stroke="#c62828" stroke-width="3"/>
+  <text x="935" y="222" text-anchor="middle" fill="#c62828">+24 V</text>
+
+  <rect x="890" y="250" width="40" height="150" rx="3" fill="#ffd9a0" stroke="#b26a00"/>
+  <text x="910" y="330" text-anchor="middle" fill="#8a5300" transform="rotate(-90 910 330)">warm strip</text>
+  <rect x="950" y="250" width="40" height="150" rx="3" fill="#cfe2ff" stroke="#1f5fae"/>
+  <text x="970" y="330" text-anchor="middle" fill="#1f5fae" transform="rotate(-90 970 330)">cool strip</text>
+  <line x1="910" y1="230" x2="910" y2="250" stroke="#c62828" stroke-width="2"/>
+  <line x1="970" y1="230" x2="970" y2="250" stroke="#c62828" stroke-width="2"/>
+
+  <polyline points="850,343 878,343 878,430 910,430 910,400" fill="none" stroke="#e08a00" stroke-width="3"/>
+  <polyline points="850,357 864,357 864,460 970,460 970,400" fill="none" stroke="#1f5fae" stroke-width="3"/>
+  <text x="933" y="490" text-anchor="middle" fill="#555">pin 2 warm −, pin 3 cool −</text>
+  <text x="933" y="508" text-anchor="middle" fill="#555">≤ 2.4 A per panel</text>
+
+  <!-- Supply into board -->
+  <line x1="250" y1="275" x2="262" y2="275" stroke="#c62828" stroke-width="3"/>
+  <line x1="250" y1="305" x2="262" y2="305" stroke="#222" stroke-width="3"/>
+  <line x1="382" y1="290" x2="500" y2="290" stroke="#c62828" stroke-width="2" stroke-dasharray="3 3"/>
+  <text x="441" y="283" text-anchor="middle" fill="#777">24 V rail</text>
+</svg>

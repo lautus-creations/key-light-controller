@@ -1,0 +1,23 @@
+Section,Qty,Designator,Description,Manufacturer,MPN,LCSC,Notes
+Board through-hole,2,MCU-U1,"Female header strip 1x40, 2.54 mm, straight, standard height",,,,"Cut one 22-pin length from each strip (cutting sacrifices one position, so one strip yields one 22). Socket for the DevKit; rows 25.4 mm apart"
+Board through-hole,1,BK-U1,"Buck converter module 24 V to 5 V, 1.5 A, SIP-3",Murata,OKI-78SR-5/1.5-W36-C,C6134431,
+Board through-hole,1,IN-C1,"Electrolytic capacitor 470 uF, 10 mm, 5 mm pitch",KNSCHA,01EC1316,C2833298,Observe polarity
+Board through-hole,3,"PA-C1,PB-C1,PC-C1","Electrolytic capacitor 100 uF, 6.3 mm, 2.5 mm pitch",KNSCHA,DXW050M107E122S1AA,C42416626,Observe polarity
+Board through-hole,1,IN-CN1,"Terminal block 2-pos, 5.08 mm",DORABO,DB142R-5.08-2P-GN,C52942255,24 V input
+Board through-hole,1,IN-F1,ATM mini blade fuse holder,XFCN,XF-508P-B-B,C19727305,
+Board through-hole,3,"PA-CN1,PB-CN1,PC-CN1","Pluggable terminal header 3-pos, 3.81 mm",KEFA,KF2EDGV-3.81-3P,C441333,Panel outputs
+Board through-hole,1,MCU-CN1,"Female header 1x14, 2.54 mm",BOOMELE,2.54-1*14P,C52711,Display header
+Board through-hole,1,MCU-SW1,Tactile switch,SHOU HAN,TS665ZJ,C557599,Reset
+Board through-hole (optional),1,MCU-CN2,"Male header 1x8, 2.54 mm",Ckmtw,B-2100S08P-A110,C124381,Expansion header
+Board through-hole (optional),4,"MCU-CN3,PA-J1,PB-J1,PC-J1","Male header 1x4, 2.54 mm",Ckmtw,B-2100S04P-A110,C124378,I2C expansion and panel test headers
+Board through-hole (optional),8,"IN-J1,BK-J1,PA-J2,PA-J3,PB-J2,PB-J3,PC-J2,PC-J3","Male header 1x2, 2.54 mm",Ckmtw,B-2100S02P-A110,C124375,Test points and spare ADC inputs
+Off-board,1,,ESP32-S3-DevKitC-1-N16R8,Espressif,ESP32-S3-DEVKITC-1-N16R8,C20438410,16 MB flash / 8 MB octal PSRAM. Check row spacing matches the socket
+Off-board,1,,"MSP3526 display module, 3.5 in ST7796U with FT6336U touch",,MSP3526,,https://www.lcdwiki.com/3.5inch_IPS_SPI_Module_ST7796
+Off-board,14,,"Dupont jumper, male to female, about 15 cm",,,,Display harness
+Off-board,3,,"Pluggable terminal plug 3-pos, 3.81 mm",KEFA,KF2EDGK-3.81-3P,C440859,Mates with PA/PB/PC-CN1; 16 to 22 AWG
+Off-board,1,,ATM mini blade fuse,,,,Size per README; 7.5 A maximum
+Off-board,3,,Nano2 fuse (Littelfuse 451 or 453 series),Littelfuse,,,Size per README; 3 A maximum
+Off-board,3,,"GX12-3 panel-mount socket and cable plug",,,,Rated 5 A or more
+Off-board,1,,Panel-mount 24 V DC jack,,,,Rated for the input fuse
+Off-board,1,,Panel-mount power switch,,,,Rated for the input fuse; DC rating at 24 V or more
+Off-board,1,,24 V DC power supply,,,,Total panel current at full brightness plus 0.5 A

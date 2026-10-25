@@ -1,0 +1,14 @@
+# PlatformIO
+.pio/
+
+# VS Code (keep extensions.json)
+.vscode/*
+!.vscode/extensions.json
+
+# OS and editor files
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.~lock.*#
