@@ -16,7 +16,7 @@ Three identical panels, each housing a single warm+cool LED channel pair:
 - **LED strips:** Yuji YJ-BC-HRB-2835-24-2765, 100 mm segments. 5 strips × 200 mm = 1.0 m of strip per panel, about 0.32 A per channel at 24 V at full output.
 - **LED-to-diffuser gap:** 30 mm
 - **Interior:** Matte black ABS lining
-- **Backing:** 3 mm aluminum plate
+- **Backing:** 3 mm aluminum plate ([the plate used](https://www.amazon.com/dp/B0BFW3W1JN))
 - **Light trap lip:** 6–10 mm
 - **Ventilation:** Passive
 
