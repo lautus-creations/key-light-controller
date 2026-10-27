@@ -34,7 +34,7 @@ Three identical panels, each housing a single warm+cool LED channel pair:
 
 - 7 M3 × 5 × 4 mm heat-set inserts (Voron standard, the same as the controller enclosure)
 - 7 M3 flat head screws
-- 1 or 2 1/4-20 heat-set inserts for mounting: one is required, the second is optional. The build used [these](https://www.amazon.com/dp/B078458CZY).
+- 1 or 2 1/4-20 heat-set inserts for mounting: one is required, the second is optional. The build used [these](https://www.amazon.com/dp/B078458CZY): 12.7 mm (0.5 in) long, 9.52 mm knurl diameter, 8.0 mm pilot end.
 
 For three panels: 21 M3 inserts, 21 M3 flat head screws and 3 to 6 1/4-20 inserts.
 
