@@ -21,3 +21,7 @@ Off-board,3,,"GX12-3 panel-mount socket and cable plug",,,,Rated 5 A or more
 Off-board,1,,Panel-mount 24 V DC jack,,,,Rated for the input fuse
 Off-board,1,,Panel-mount power switch,,,,Rated for the input fuse; DC rating at 24 V or more
 Off-board,1,,24 V DC power supply,,,,Total panel current at full brightness plus 0.5 A
+Enclosure,20,,"Heat-set insert M3 x 5 x 4 mm (Voron standard)",,,,"4 screen panel (display), 4 PCB plate panel (PCB), 12 case (panels)"
+Enclosure,4,,"Standoff M3 x 6 mm",,,,Between PCB plate panel and PCB
+Enclosure,8,,"Socket head cap screw M3 x 4 mm (or 6 mm)",,,,"4 display, 4 PCB"
+Enclosure,12,,"Flat head screw M3 x 8 mm",,,,Case assembly

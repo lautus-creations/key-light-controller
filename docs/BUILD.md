@@ -15,7 +15,7 @@ There are two BOMs:
 | [`hardware/gerber/CCTRL_rev0.2_BOM_*.xlsx`](../hardware/gerber/) | Every part on the board, as exported from EasyEDA, with LCSC part numbers | Upload to JLCPCB with the gerbers and pick-and-place file |
 | [`hardware/bom/CCTRL_rev0.2_BOM_hand-assembly.csv`](../hardware/bom/) | Through-hole parts, the DevKit socket headers, and everything off the board | Order the parts you will fit yourself from LCSC (part numbers given) or any distributor |
 
-The hand-assembly BOM marks the test points and expansion headers as optional. The enclosure is printed from [`hardware/mechanical/enclosure/pcb/`](../hardware/mechanical/enclosure/pcb/).
+The hand-assembly BOM marks the test points and expansion headers as optional. The enclosure is printed from [`hardware/mechanical/enclosure/pcb/`](../hardware/mechanical/enclosure/pcb/) and needs M3 heat-set inserts, standoffs and screws (see [section 7](#7-enclosure)).
 
 ### DevKit fit
 
@@ -144,11 +144,22 @@ See [Building the Firmware](../README.md#building-the-firmware).
 
 Print the parts in [`hardware/mechanical/enclosure/pcb/`](../hardware/mechanical/enclosure/pcb/) in PETG or ABS. A STEP model of the full assembly is attached to the release for reference and modification.
 
-1. Mount the PCB on the PCB plate panel.
-2. Fit the three GX12-3 sockets to the rear panel and wire each to its panel output plug: socket pin 1 to plug pin 1 (+24 V), pin 2 to pin 2 (warm −), pin 3 to pin 3 (cool −). Use wire rated for the panel fuse; 20 AWG covers every allowed fuse.
-3. Fit the 24 V DC jack and power switch to the rear panel and wire them to IN-CN1, with the switch in the +24 V lead. Check that the jack's current rating covers the input fuse you fit.
-4. Fit the display to the screen panel and connect the harness.
-5. Close the case.
+Hardware:
+
+- **20 M3 × 5 × 4 mm heat-set inserts** (M3 thread, 5 mm outer diameter, 4 mm long; the Voron standard size):
+  - 4 in the screen panel, for the display mount
+  - 4 in the PCB plate panel, for the PCB mount
+  - 12 in the case, 4 each for the screen panel, rear panel and PCB plate panel
+- **4 M3 × 6 mm standoffs** between the PCB plate panel and the PCB
+- **8 M3 × 4 mm (or 6 mm) socket head cap screws**: 4 for the display, 4 for the PCB
+- **12 M3 × 8 mm flat head screws** for the case assembly
+
+1. Press the heat-set inserts into the case, screen panel and PCB plate panel.
+2. Mount the PCB on the PCB plate panel with four socket head screws, with the M3 × 6 mm standoffs between the plate and the board.
+3. Fit the three GX12-3 sockets to the rear panel and wire each to its panel output plug: socket pin 1 to plug pin 1 (+24 V), pin 2 to pin 2 (warm −), pin 3 to pin 3 (cool −). Use wire rated for the panel fuse; 20 AWG covers every allowed fuse.
+4. Fit the 24 V DC jack and power switch to the rear panel and wire them to IN-CN1, with the switch in the +24 V lead. Check that the jack's current rating covers the input fuse you fit.
+5. Fit the display to the screen panel with four socket head screws and connect the harness.
+6. Screw the screen panel, rear panel and PCB plate panel to the case with the twelve flat head screws.
 
 ![Rear panel: panel outputs A to C, 24 V jack and power switch](images/photos/rear-panel.jpg)
 
