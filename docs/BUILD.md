@@ -178,7 +178,7 @@ Each panel needs separate warm and cool LED channels sharing a common +24 V:
 | 3 | Cool strip − |
 | Shell | Not connected |
 
-Use the same pinout on every panel. A [reference panel design](../hardware/mechanical/panels/reference-design/) is included. Any 24 V panel within the [ratings](../README.md#ratings-and-fuse-selection) works.
+Use the same pinout on every panel. A [reference panel design](../hardware/mechanical/panels/reference-design/) is included; each panel needs 7 M3 heat-set inserts, 7 M3 flat head screws and one or two 1/4-20 heat-set inserts (see its README). Any 24 V panel within the [ratings](../README.md#ratings-and-fuse-selection) works.
 
 ---
 

@@ -30,6 +30,14 @@ Three identical panels, each housing a single warm+cool LED channel pair:
 | `Key Light Housing.step` | Full assembly STEP file (editable in any CAD tool) |
 | `Key Light Housing.f3z` | Fusion 360 source archive |
 
+## Hardware (per panel)
+
+- 7 M3 × 5 × 4 mm heat-set inserts (Voron standard, the same as the controller enclosure)
+- 7 M3 flat head screws
+- 1 or 2 1/4-20 heat-set inserts for mounting: one is required, the second is optional. The build used [these](https://www.amazon.com/dp/B078458CZY).
+
+For three panels: 21 M3 inserts, 21 M3 flat head screws and 3 to 6 1/4-20 inserts.
+
 ## Connector
 
 Each panel connects to the controller via a GX12-3 aviation connector:
