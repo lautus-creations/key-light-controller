@@ -95,16 +95,11 @@ The platform is pinned to `platformio/espressif32 @ 6.12.0` (Arduino-ESP32 2.0.1
 ```bash
 cd firmware
 pio run                      # first run downloads TFT_eSPI and LVGL
-```
-
-Copy `firmware/lv_conf.h` to `.pio/libdeps/esp32-s3-devkitc-1/lvgl/lv_conf.h` (LVGL locates its configuration relative to the library), then:
-
-```bash
 pio run --target upload
 pio device monitor           # 115200 baud, native USB port
 ```
 
-Serial output uses the DevKit's native USB port (`ARDUINO_USB_CDC_ON_BOOT=1`). A clean build or a library update removes `lv_conf.h` from `.pio`; copy it again if the build reports it missing.
+Serial output uses the DevKit's native USB port (`ARDUINO_USB_CDC_ON_BOOT=1`). LVGL reads its configuration from `firmware/lv_conf.h` (set by `LV_CONF_PATH` in `platformio.ini`); nothing needs copying into `.pio`.
 
 ### Serial console
 

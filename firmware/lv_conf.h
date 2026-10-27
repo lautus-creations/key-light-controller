@@ -1,6 +1,6 @@
 /**
  * lv_conf.h - LVGL 8 configuration for the CCTRL Key Light Controller.
- * Copy to .pio/libdeps/esp32-s3-devkitc-1/lvgl/lv_conf.h before building.
+ * Read in place via LV_CONF_PATH in platformio.ini; do not copy it into .pio.
  */
 
 #if 1  /* must be 1 to enable */

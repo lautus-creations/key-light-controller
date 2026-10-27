@@ -3,13 +3,14 @@
 
 /*
  * screen_splash.cpp - Boot splash, laid out to match keylight_splash.html.
- * Logo box, subtitle and a 2.5 s load bar, then advances to SCR_MAIN.
+ * Logo box, CCTRL mark and a 2.5 s load bar, then advances to SCR_MAIN.
  */
 
 #include "screens/screen_splash.h"
 #include "screens/screen_manager.h"
 #include "ui_theme.h"
 #include "lautus_logo.h"
+#include "cctrl_logo.h"
 #include <Arduino.h>
 
 static lv_obj_t  *s_bar = nullptr;
@@ -100,14 +101,14 @@ lv_obj_t* screen_splash_create() {
     draw_corner(scr, UI_W - INS,  UI_H - INS,  ARM, true,  true,  BOPA);  // BR
 
     // ── Layout ────────────────────────────────────────────────
-    // Stack: box(113) + 16 + subtitle(~13) + 20 + bar(1) = 163px,
-    // centred vertically: (320 - 163) / 2 = 78
+    // Stack: box(113) + 16 + CCTRL mark(20) + 20 + bar(1) = 170px,
+    // centred vertically: (320 - 170) / 2 = 75
     const int LOGO_W = 320, LOGO_H = 87;
     const int PAD_H  = 32,  PAD_T = 14;
     const int BOX_W  = LOGO_W + 2 * PAD_H;   // 384
     const int BOX_H  = PAD_T + LOGO_H + 12;   // 113
     const int BOX_X  = (UI_W - BOX_W) / 2;   // 48
-    const int BOX_Y  = 78;
+    const int BOX_Y  = 75;
 
     // Box border
     lv_obj_t *box = lv_obj_create(scr);
@@ -133,18 +134,14 @@ lv_obj_t* screen_splash_create() {
     draw_accent_line(scr, ACC_X, BOX_Y,           ACC_W, AOPA);  // top
     draw_accent_line(scr, ACC_X, BOX_Y + BOX_H,   ACC_W, AOPA);  // bottom
 
-    // ── Subtitle ──────────────────────────────────────────────
+    // ── CCTRL mark ────────────────────────────────────────────
     const int SUB_Y = BOX_Y + BOX_H + 16;
-    lv_obj_t *lbl_sub = lv_label_create(scr);
-    lv_label_set_text(lbl_sub, "Key Light Controller");
-    lv_obj_set_style_text_color(lbl_sub, lv_color_hex(0x3A4A60), LV_PART_MAIN);
-    lv_obj_set_style_text_font (lbl_sub, UI_FONT_SMALL,           LV_PART_MAIN);
-    lv_obj_set_style_text_align(lbl_sub, LV_TEXT_ALIGN_CENTER,    LV_PART_MAIN);
-    lv_obj_set_size(lbl_sub, UI_W, LV_SIZE_CONTENT);
-    lv_obj_set_pos(lbl_sub, 0, SUB_Y);
+    lv_obj_t *mark = lv_img_create(scr);
+    lv_img_set_src(mark, &cctrl_logo);
+    lv_obj_set_pos(mark, (UI_W - cctrl_logo.header.w) / 2, SUB_Y);
 
     // ── Load bar ──────────────────────────────────────────────
-    const int BAR_Y = SUB_Y + 13 + 20;   // ~13px subtitle height + 20px gap
+    const int BAR_Y = SUB_Y + cctrl_logo.header.h + 20;   // mark height + 20px gap
     s_bar = lv_bar_create(scr);
     lv_obj_set_size(s_bar, 200, 1);
     lv_obj_set_pos(s_bar, (UI_W - 200) / 2, BAR_Y);
