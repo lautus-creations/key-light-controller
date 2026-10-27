@@ -124,8 +124,7 @@ static void on_cb(lv_event_t *e) {
 
 static void sys_cb(lv_event_t *e) {
     g_state.system_on = !g_state.system_on;
-    if (!g_state.system_on) pwm_all_off();
-    else apply();
+    outputs_apply_all();   // System affects every port, not only this group
     refresh_sys_btn();
     refresh_on_btn();
     schedule_save();
