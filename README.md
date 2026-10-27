@@ -4,7 +4,9 @@ A touchscreen controller for up to three tunable-white (CCT) LED panels, designe
 
 By [Lautus Creations](https://github.com/lautus-creations).
 
-![Controller with three reference panels](docs/images/photos/controller-3200k.jpg)
+![Two reference panels over a desk, with the controller beside the right monitor](docs/images/photos/desk-setup.jpg)
+
+![Controller showing a two-panel group at 60 % and 4500 K](docs/images/photos/controller-ui.jpg)
 
 ![The same panels at 3200 K, 5600 K and 6100 K](docs/images/photos/cct-range.jpg)
 

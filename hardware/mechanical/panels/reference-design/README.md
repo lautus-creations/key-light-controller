@@ -6,7 +6,9 @@ The controller drives up to three panels, each with warm and cool LED channels.
 
 ## This Design
 
-![Through the diffuser: alternating warm and cool LEDs](../../../../docs/images/photos/panel-leds.jpg)
+![Panel mounted on a desk boom, unlit](../../../../docs/images/photos/panel-front.jpg)
+
+![Through the diffuser: alternating warm and cool LEDs](../../../../docs/images/photos/panel-lit.jpg)
 
 Three identical panels, each housing a single warm+cool LED channel pair:
 
