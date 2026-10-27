@@ -2,7 +2,7 @@
 
 A touchscreen controller for up to three tunable-white (CCT) LED panels, designed for video and photography lighting. Each panel has separate warm and cool LED channels; the controller sets color temperature (2700 to 6500 K) and brightness per panel or per group, and protects each panel with current sensing and a per-panel fuse.
 
-By [Lautus Creations](https://github.com/lautus-creations).
+By [Lautus Creations](https://lautuscreations.com). Project page and build log: [lautuscreations.com/projects/key-light-controller](https://lautuscreations.com/projects/key-light-controller/).
 
 > [!WARNING]
 > **Safety and liability**
