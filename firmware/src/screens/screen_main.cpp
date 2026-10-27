@@ -208,7 +208,7 @@ static void cct_plus_cb(lv_event_t *e) {
 }
 
 // ── Pill button helper ─────────────────────────────────────────
-// Pill-shaped button with a centred label. Returns the button.
+// Pill-shaped button with a centered label. Returns the button.
 static lv_obj_t* make_pill_btn(lv_obj_t *parent,
                                 int x, int y, int w, int h,
                                 const char *text,
@@ -255,7 +255,7 @@ static lv_obj_t* make_slider_row(lv_obj_t *parent,
 {
     const int BGAP = 2;   // nudge button to value label
     // The knob overhangs the track by 5px each side (pad=5 in ui_style_slider),
-    // so both gaps must exceed 5 for the knob to clear its neighbours.
+    // so both gaps must exceed 5 for the knob to clear its neighbors.
     const int LGAP = 10;
     const int RGAP = (btn_sz > 0) ? 8 : 10;
 
@@ -267,7 +267,7 @@ static lv_obj_t* make_slider_row(lv_obj_t *parent,
     int vx    = mx   + (btn_sz > 0 ? btn_sz + BGAP : 0);  // value label x
     int px    = vx   + val_w + BGAP;             // plus button x
 
-    // Centre text and buttons on the track
+    // Center text and buttons on the track
     int fh      = (int)font->line_height;
     int track_cy = iy + track_h / 2;
     int text_y   = track_cy - fh / 2;
@@ -474,7 +474,7 @@ static void build_card(lv_obj_t *scr, int ci, int g, int nc,
     } else {
         // ── Compact multi-card layout ──
         total = HDR_H + G1 + ROW_H + G2 + ROW_H + G3 + FTR_H;
-        // 18+12+22+10+22+10+24 = 118px, centred vertically
+        // 18+12+22+10+22+10+24 = 118px, centered vertically
         iy = (inner_h - total) / 2;
         if (iy < 0) iy = 0;
 
@@ -576,7 +576,7 @@ lv_obj_t* screen_main_create() {
     lv_obj_set_style_bg_opa(s_sys_thumb, LV_OPA_COVER, LV_PART_MAIN);
     lv_obj_set_style_border_width(s_sys_thumb, 0, LV_PART_MAIN);
     lv_obj_clear_flag(s_sys_thumb, LV_OBJ_FLAG_CLICKABLE | LV_OBJ_FLAG_SCROLLABLE);
-    refresh_sys_toggle();   // sets colours and thumb position
+    refresh_sys_toggle();   // sets colors and thumb position
 
     lv_obj_t *lbl_sys_lbl = lv_label_create(topbar);
     lv_label_set_text(lbl_sys_lbl, "System");

@@ -9,7 +9,7 @@
  *  - Trip modal on LVGL's top layer (any screen). OK dismisses the message;
  *    the trip stays latched until Reset or Off -> On.
  *  - One-time notice if the boot self-test found no 24 V on the panel rails.
- *  - Main-screen status dot colour: red = tripped, amber = warning.
+ *  - Main-screen status dot color: red = tripped, amber = warning.
  *
  * Call fault_ui_init() after display_init() and screen_manager_goto(SCR_SPLASH).
  */

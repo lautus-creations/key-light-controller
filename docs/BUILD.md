@@ -2,6 +2,13 @@
 
 This guide covers building one controller: ordering and assembling the PCB, wiring the display and panels, flashing the firmware, and first power-up.
 
+> [!WARNING]
+> **Safety and liability**
+>
+> Building and using this project involves soldering, a mains-powered 24 V supply, and currents of several amps. Mistakes can cause electric shock, fire, burns, or damage to equipment. Build it only if you are competent to do this kind of work, follow the safety instructions for your power supply and tools, and comply with local electrical codes. Never work on the controller or panels while they are powered.
+>
+> By building or using this project, you acknowledge these risks and voluntarily assume all risk arising from it, including the risk of personal injury or death and of damage to or loss of property. The design, firmware, and documentation are provided "as is" and "with all faults," without warranty of any kind, express or implied. The authors accept no liability for personal injury, death, or property damage or loss arising from their use. This notice is in addition to the warranty disclaimers and limitations of liability in this repository's licenses.
+
 ![Wiring overview](images/wiring.svg)
 
 ---
@@ -36,7 +43,7 @@ The DevKit sits in two 1×22 female headers with rows **25.4 mm (1.0 in)** apart
 
 ## 3. Assemble the Board
 
-1. Cut a 22-pin length from each 1×40 female header strip: pull the 23rd contact and cut through its hole with flush cutters, then file the end smooth. Solder the two headers into MCU-U1. Plug the DevKit in while soldering so the headers stay square, then remove it.
+1. Cut a 22-pin length from each 1×40 female header strip: pull the 23rd contact and cut through its hole with flush cutters, then file the end smooth. Fit the two headers in MCU-U1 and plug the DevKit into them to hold them square. Tack two pins on each header, then remove the DevKit and solder the rest. Work quickly on each joint. Too much heat softens the header plastic and lets the socket contacts shift, which is why the DevKit comes out before the rest are soldered.
 2. Fit the remaining through-hole parts from the hand-assembly BOM. Observe polarity on the electrolytic capacitors.
 3. Fit the fuses: the ATM blade fuse in IN-F1 and a Nano2 fuse in each of PA-F1, PB-F1 and PC-F1. Size them from the [fuse table](../README.md#ratings-and-fuse-selection).
 4. Leave the DevKit and display off for now.
@@ -111,7 +118,7 @@ MCU-CN1 is mirrored relative to the display's pin order: **board pin N connects 
 
 ## 6. Flash the Firmware
 
-Flash before closing the enclosure. The DevKit's native USB port (labelled **USB** on most boards) carries both flashing and the serial console. The DevKit can be powered from USB alone for flashing; the panels need 24 V.
+Flash before closing the enclosure. The DevKit's native USB port (labeled **USB** on most boards) carries both flashing and the serial console. The DevKit can be powered from USB alone for flashing; the panels need 24 V.
 
 ### Prebuilt binary
 
@@ -207,6 +214,6 @@ See the [User Guide](USER_GUIDE.md) for day-to-day operation.
 | A port shows **Sensing offline** | Board assembly around that port's ADS1115 (addresses 0x48, 0x49, 0x4A) |
 | Panel LED (PA-LED1 etc.) stays off with the panel on | That port's Nano2 fuse |
 | A panel trips as soon as it turns on | The panel draws more than its trip limit. In **Port Configuration > Trip limit**, tap **New panel**, then run Check and Save reference |
-| DevKit RGB LED shows random colours | Some DevKit variants drive it from GPIO 48, used here for Panel C cool PWM. Harmless |
+| DevKit RGB LED shows random colors | Some DevKit variants drive it from GPIO 48, used here for Panel C cool PWM. Harmless |
 
 For anything else, connect a serial monitor at 115200 baud and type `help`.

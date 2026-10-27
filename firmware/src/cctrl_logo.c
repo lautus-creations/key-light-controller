@@ -3,7 +3,7 @@
 
 // CCTRL mark for the splash screen, 102x20, RGB565 (byte-swapped) + 8-bit alpha.
 // Generated from assets/cctrl_logo_concept.svg: half-filled circle and wordmark,
-// colour #4A698C, alpha-blended so it sits cleanly over the bloom.
+// color #4A698C, alpha-blended so it sits cleanly over the bloom.
 
 #include "lvgl.h"
 

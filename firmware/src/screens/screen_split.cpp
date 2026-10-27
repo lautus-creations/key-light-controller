@@ -4,7 +4,7 @@
 /*
  * screen_split.cpp - Groups configuration screen (screen_groups_create).
  *
- * One tile per port, coloured by group. Preset buttons: Link All,
+ * One tile per port, colored by group. Preset buttons: Link All,
  * Separate All, and the three pairings (A+B|C, B+C|A, A+C|B).
  * Changes apply and save immediately.
  */
@@ -17,7 +17,7 @@
 #include "save_manager.h"
 #include <Arduino.h>
 
-// Tile fill and border colours per group index
+// Tile fill and border colors per group index
 static lv_color_t group_tile_col(int g_idx) {
     switch (g_idx % 3) {
         case 0: return lv_color_hex(0x1C3F6E);   // dim accent

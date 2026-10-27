@@ -16,7 +16,7 @@
  *   With a reference : PASS within ±PANELCHECK_REF_TOL, else LOW / HIGH.
  *   No reference     : NO REF (= current flows and the other channel is dark).
  *   Always           : NO CURRENT, WRONG CHANNEL (other channel lit), TRIPPED.
- * Outputs are restored from g_state when the check ends or is cancelled.
+ * Outputs are restored from g_state when the check ends or is canceled.
  */
 
 enum PcVerdict : uint8_t { PC_NOT_RUN = 0, PC_PASS, PC_LOW, PC_HIGH, PC_NONE, PC_XTALK, PC_SKIPPED, PC_TRIP, PC_NOREF };
@@ -38,7 +38,7 @@ void  panel_check_start();
 void  panel_check_cancel();
 void  panel_check_tick();              // call from loop()
 bool  panel_check_running();
-bool  panel_check_done();              // finished (not cancelled) since last start
+bool  panel_check_done();              // finished (not canceled) since last start
 int   panel_check_current_panel();     // -1 when idle
 int   panel_check_current_ch();        // 0 warm / 1 cool / -1
 const PcPanel &panel_check_result(uint8_t panel);

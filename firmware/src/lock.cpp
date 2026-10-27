@@ -12,7 +12,7 @@
 #include <lvgl.h>
 
 static lv_obj_t   *s_ov    = nullptr;   // full-screen touch catcher on lv_layer_top()
-static lv_obj_t   *s_hint  = nullptr;   // centre card: text + progress bar
+static lv_obj_t   *s_hint  = nullptr;   // center card: text + progress bar
 static lv_obj_t   *s_bar   = nullptr;
 static lv_obj_t   *s_badge = nullptr;   // small "Locked" tag, always visible
 static lv_timer_t *s_hide  = nullptr;

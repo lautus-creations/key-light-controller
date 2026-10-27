@@ -3,13 +3,13 @@
 
 // RGB LED pin finder — clone ESP32-S3 DevKit
 // ---------------------------------------------------------------------------
-// The factory firmware on these boards colour-cycles the onboard RGB LED, but
+// The factory firmware on these boards color-cycles the onboard RGB LED, but
 // neither GPIO 38 nor GPIO 48 drives it with addressable (WS2812) data. This
 // sketch tries every GPIO that is safe to drive on an N16R8 module, two ways:
 //
 //   1. WS2812 data (green, 0.8 s)      -> lights if the LED is addressable on this pin
 //   2. Plain HIGH 0.4 s, then LOW 0.4 s -> lights if it's a simple RGB LED
-//      (one colour per pin; common-anode types light on LOW)
+//      (one color per pin; common-anode types light on LOW)
 //
 // Watch the LED and the serial monitor. When the LED reacts, note the GPIO and
 // which phase ("ws2812", "HIGH" or "LOW") was printed just before it.

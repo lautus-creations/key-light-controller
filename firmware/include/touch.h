@@ -4,7 +4,7 @@
 #pragma once
 #include <lvgl.h>
 
-// Initialise FT6x36U and register LVGL input driver.
+// Initialize FT6x36U and register LVGL input driver.
 // Call after display_init() in setup(). The shared I2C bus must already be up
 // (i2c_bus_init()). Returns false if the controller did not ACK at 0x38.
 bool touch_init();

@@ -114,7 +114,7 @@ void panel_check_start() {
 
 void panel_check_cancel() {
     if (!panel_check_running()) return;
-    Serial.println("[CHECK] Cancelled");
+    Serial.println("[CHECK] Canceled");
     finish(false);
 }
 

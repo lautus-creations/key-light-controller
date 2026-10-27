@@ -62,7 +62,7 @@ struct AppState {
 
 extern AppState g_state;
 
-// Initialise g_state to factory defaults
+// Initialize g_state to factory defaults
 void app_state_init();
 
 // ── Group helpers (inline) ────────────────────────────────────

@@ -1,8 +1,15 @@
 # CCTRL Key Light Controller
 
-A touchscreen controller for up to three tunable-white (CCT) LED panels, designed for video and photography lighting. Each panel has separate warm and cool LED channels; the controller sets colour temperature (2700 to 6500 K) and brightness per panel or per group, and protects each panel with current sensing and a per-panel fuse.
+A touchscreen controller for up to three tunable-white (CCT) LED panels, designed for video and photography lighting. Each panel has separate warm and cool LED channels; the controller sets color temperature (2700 to 6500 K) and brightness per panel or per group, and protects each panel with current sensing and a per-panel fuse.
 
 By [Lautus Creations](https://github.com/lautus-creations).
+
+> [!WARNING]
+> **Safety and liability**
+>
+> Building and using this project involves soldering, a mains-powered 24 V supply, and currents of several amps. Mistakes can cause electric shock, fire, burns, or damage to equipment. Build it only if you are competent to do this kind of work, follow the safety instructions for your power supply and tools, and comply with local electrical codes. Never work on the controller or panels while they are powered.
+>
+> By building or using this project, you acknowledge these risks and voluntarily assume all risk arising from it, including the risk of personal injury or death and of damage to or loss of property. The design, firmware, and documentation are provided "as is" and "with all faults," without warranty of any kind, express or implied. The authors accept no liability for personal injury, death, or property damage or loss arising from their use. This notice is in addition to the warranty disclaimers and limitations of liability in this repository's licenses.
 
 ![Two reference panels over a desk, with the controller beside the right monitor](docs/images/photos/desk-setup.jpg)
 
@@ -20,7 +27,7 @@ By [Lautus Creations](https://github.com/lautus-creations).
 
 - **Three panel ports**, each with a high-side switch, a fuse and independent warm/cool PWM channels.
 - **Flicker-free dimming:** 10-bit PWM at 25 kHz by default, selectable 20/25/30/39 kHz for testing against a specific camera. Brightness follows a perceptual curve (linear available).
-- **Groups and presets:** link panels to move together; three named colour-temperature presets.
+- **Groups and presets:** link panels to move together; three named color-temperature presets.
 - **Current and voltage sensing** on every channel and panel rail, with latched protection:
   - Trips (panel switched off until re-armed): over-current, MOSFET stuck on, dead rail (blown fuse or no 24 V), high-side switch stuck on.
   - Warnings: open channel or unplugged panel, low rail voltage, sensing offline.
@@ -61,7 +68,7 @@ Choose fuses for the panels you connect. Do not exceed the caps below; the board
 | Fuse | How to size it | Do not exceed |
 |---|---|---|
 | Input (ATM mini blade) | Total panel current at full brightness × 1.25, plus 0.5 A for the controller | **7.5 A** |
-| Per panel (Nano2, Littelfuse 451/453 very fast-acting) | Panel current at full brightness × 1.25, rounded up to the next standard value; not below 1 A | **3 A** |
+| Per panel (Nano2, Littelfuse 451/453 very fast-acting) | Panel current at full brightness × 1.25, rounded up to the next standard value | **3 A** |
 
 - Maximum continuous load: **2.4 A per panel, 6 A total** at 24 V.
 - A panel's current at full brightness is the higher of its warm or cool channel at 100 %. The controller never drives warm and cool above a combined 100 %.
@@ -122,7 +129,7 @@ tools/        Small test sketches for identifying DevKit board variants
 
 ## Notes
 
-- **DevKit clones:** some ESP32-S3-DevKitC-1 clones drive their onboard RGB LED from GPIO 48, which this board uses for Panel C cool PWM. The LED shows random colours while Panel C is lit. It is harmless and can be covered or removed.
+- **DevKit clones:** some ESP32-S3-DevKitC-1 clones drive their onboard RGB LED from GPIO 48, which this board uses for Panel C cool PWM. The LED shows random colors while Panel C is lit. It is harmless and can be covered or removed.
 - **Display backlight:** the backlight is switched fully on or off. PWM dimming of this module's backlight interferes with its capacitive touch controller.
 
 ---

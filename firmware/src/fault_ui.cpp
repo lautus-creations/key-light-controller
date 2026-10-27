@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 /*
- * fault_ui.cpp - Fault modal and main-screen status dot colour.
+ * fault_ui.cpp - Fault modal and main-screen status dot color.
  */
 
 #include "fault_ui.h"

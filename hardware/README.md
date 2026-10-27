@@ -2,6 +2,13 @@
 
 Design files for the controller PCB (rev 0.2) and a reference panel design. Assembly steps are in the [Build Guide](../docs/BUILD.md).
 
+> [!WARNING]
+> **Safety and liability**
+>
+> Building and using this project involves soldering, a mains-powered 24 V supply, and currents of several amps. Mistakes can cause electric shock, fire, burns, or damage to equipment. Build it only if you are competent to do this kind of work, follow the safety instructions for your power supply and tools, and comply with local electrical codes. Never work on the controller or panels while they are powered.
+>
+> By building or using this project, you acknowledge these risks and voluntarily assume all risk arising from it, including the risk of personal injury or death and of damage to or loss of property. The design, firmware, and documentation are provided "as is" and "with all faults," without warranty of any kind, express or implied. The authors accept no liability for personal injury, death, or property damage or loss arising from their use. This notice is in addition to the warranty disclaimers and limitations of liability in this repository's licenses.
+
 ```
 hardware/
   EasyEda Project/            EasyEDA Pro project (schematic and PCB source)
@@ -40,5 +47,5 @@ The hardware design is released under the [CERN Open Hardware Licence v2, Strong
 
 Source Location: https://github.com/lautus-creations/key-light-controller
 
-If you distribute boards or products based on this design, the licence requires you to make the complete design source, including your changes, available under the same licence, and to keep this notice and the Source Location with the product.
+If you distribute boards or products based on this design, the license requires you to make the complete design source, including your changes, available under the same license, and to keep this notice and the Source Location with the product.
 

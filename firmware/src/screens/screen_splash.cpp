@@ -85,7 +85,7 @@ lv_obj_t* screen_splash_create() {
     // Solid low-opacity ellipse standing in for the HTML radial gradient.
     lv_obj_t *bloom = lv_obj_create(scr);
     lv_obj_set_size(bloom, 340, 150);
-    lv_obj_set_pos(bloom, (UI_W - 340) / 2, 134 - 75);   // centre y = 134
+    lv_obj_set_pos(bloom, (UI_W - 340) / 2, 134 - 75);   // center y = 134
     lv_obj_set_style_radius  (bloom, LV_RADIUS_CIRCLE, LV_PART_MAIN);
     lv_obj_set_style_bg_color(bloom, UI_COL_ACCENT,    LV_PART_MAIN);
     lv_obj_set_style_bg_opa  (bloom, (lv_opa_t)20,     LV_PART_MAIN);
@@ -102,7 +102,7 @@ lv_obj_t* screen_splash_create() {
 
     // ── Layout ────────────────────────────────────────────────
     // Stack: box(113) + 16 + CCTRL mark(20) + 20 + bar(1) = 170px,
-    // centred vertically: (320 - 170) / 2 = 75
+    // centered vertically: (320 - 170) / 2 = 75
     const int LOGO_W = 320, LOGO_H = 87;
     const int PAD_H  = 32,  PAD_T = 14;
     const int BOX_W  = LOGO_W + 2 * PAD_H;   // 384

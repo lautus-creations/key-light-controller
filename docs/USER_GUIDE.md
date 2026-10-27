@@ -2,6 +2,13 @@
 
 All settings save automatically about one second after the last change and are restored at power-up, including which panels were on.
 
+> [!WARNING]
+> **Safety and liability**
+>
+> Building and using this project involves soldering, a mains-powered 24 V supply, and currents of several amps. Mistakes can cause electric shock, fire, burns, or damage to equipment. Build it only if you are competent to do this kind of work, follow the safety instructions for your power supply and tools, and comply with local electrical codes. Never work on the controller or panels while they are powered.
+>
+> By building or using this project, you acknowledge these risks and voluntarily assume all risk arising from it, including the risk of personal injury or death and of damage to or loss of property. The design, firmware, and documentation are provided "as is" and "with all faults," without warranty of any kind, express or implied. The authors accept no liability for personal injury, death, or property damage or loss arising from their use. This notice is in addition to the warranty disclaimers and limitations of liability in this repository's licenses.
+
 ---
 
 ## Home
@@ -10,10 +17,10 @@ All settings save automatically about one second after the last change and are r
 
 One card per group. With all panels separate, that is one card per panel.
 
-- **Bri** sets brightness (0 to 100 %). **CCT** sets colour temperature (2700 to 6500 K).
+- **Bri** sets brightness (0 to 100 %). **CCT** sets color temperature (2700 to 6500 K).
 - **On** switches the group on or off. **Detail** opens the full controls.
 - **System** switches every panel on or off together. Each panel's own on/off setting is kept and comes back when System is switched on.
-- The dot beside each name shows status: green on, grey off, amber warning, red tripped.
+- The dot beside each name shows status: green on, gray off, amber warning, red tripped.
 
 When panels are linked, cards get wider and gain **−** / **+** buttons for 5 % and 100 K steps:
 
@@ -23,13 +30,13 @@ When panels are linked, cards get wider and gain **−** / **+** buttons for 5 %
 
 ![Panel detail](images/ui-panel-detail.png)
 
-Large brightness and colour temperature controls with **−** / **+** steps, the three presets, and **On**. Controls act on the whole group. **Prev** and **Next** move between groups. **SYS** is the System switch.
+Large brightness and color temperature controls with **−** / **+** steps, the three presets, and **On**. Controls act on the whole group. **Prev** and **Next** move between groups. **SYS** is the System switch.
 
 ## Groups
 
 ![Groups](images/ui-groups.png)
 
-Grouped panels share brightness and colour temperature. Choose **Link All**, **Separate All**, or one of the pairings. Changes apply immediately.
+Grouped panels share brightness and color temperature. Choose **Link All**, **Separate All**, or one of the pairings. Changes apply immediately.
 
 ## Lock and Idle Screen
 
@@ -65,7 +72,7 @@ By default the limit is twice the current recorded by Panel Check for that port,
 
 ### Edit Presets
 
-Sets the colour temperature and name of the three presets shown on Panel Detail.
+Sets the color temperature and name of the three presets shown on Panel Detail.
 
 ### Output
 

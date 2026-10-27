@@ -39,7 +39,7 @@
 
 // 1 = genuine DevKitC-1 v1.1 (RGB LED on GPIO 38, usable as failsafe).
 // 0 = clone DevKit with the RGB LED on GPIO 48: that pin carries Panel C cool
-// PWM, so the LED latches random colours. Only a hardware change fixes it.
+// PWM, so the LED latches random colors. Only a hardware change fixes it.
 #define BOARD_HAS_RGB_FAILSAFE  0
 
 static const uint8_t PWM_PINS[6] = {
