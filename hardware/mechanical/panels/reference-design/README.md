@@ -14,6 +14,7 @@ Three identical panels, each housing a single warm+cool LED channel pair:
 
 - **Overall dimensions:** 255 × 128.5 mm
 - **LED strips:** Yuji YJ-BC-HRB-2835-24-2765, 100 mm segments. 5 strips × 200 mm = 1.0 m of strip per panel, about 0.32 A per channel at 24 V at full output.
+- **Diffuser:** 3 mm acrylic, 5 × 10 in (the same size as the backing plate), with Rosco Cinegel #3006 Tough Spun diffusion film on the inside face
 - **LED-to-diffuser gap:** 30 mm
 - **Interior:** Matte black ABS lining
 - **Backing:** Aluminum plate, 5 × 10 × 0.125 in (127 × 254 × 3.2 mm) ([the plate used](https://www.amazon.com/dp/B0BFW3W1JN))
