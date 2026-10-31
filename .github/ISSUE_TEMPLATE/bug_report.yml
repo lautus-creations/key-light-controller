@@ -1,0 +1,55 @@
+name: Bug or fault report
+description: The controller or firmware is not behaving as documented.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. If a panel tripped, note the fault shown in the popup and on the Diagnostics page.
+        Disconnect power before inspecting or reworking the board.
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      description: Shown under Menu > About, or at the top of the serial console at boot.
+      placeholder: "1.2.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: board
+    attributes:
+      label: Controller board
+      options:
+        - PCB rev 0.2
+        - PCB rev 0.1
+        - Other (describe below)
+    validations:
+      required: true
+  - type: dropdown
+    id: devkit
+    attributes:
+      label: DevKit
+      options:
+        - Espressif ESP32-S3-DevKitC-1-N16R8
+        - Clone board
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: panels
+    attributes:
+      label: Panels and power
+      description: Which ports have panels connected, their approximate current at full brightness, the fuses fitted, and the 24 V supply rating.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Serial console output
+      description: Connect the DevKit's native USB port at 115200 baud and paste the output from boot through the problem. The `faults` and `sense` commands are useful.
+      render: text

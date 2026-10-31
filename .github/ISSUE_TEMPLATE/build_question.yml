@@ -1,0 +1,31 @@
+name: Build question
+description: Help with parts, assembly, flashing or setup.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check the [Build Guide](https://github.com/lautus-creations/key-light-controller/blob/main/docs/BUILD.md) first.
+        Disconnect power before inspecting or reworking the board.
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Build stage
+      options:
+        - Parts and ordering
+        - Board assembly
+        - Display harness
+        - Flashing the firmware
+        - Enclosure
+        - Panels
+        - First power-up
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What you are trying to do, what you have tried, and where you are stuck. Photos help.
+    validations:
+      required: true

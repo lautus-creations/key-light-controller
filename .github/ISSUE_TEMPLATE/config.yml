@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Build Guide
+    url: https://github.com/lautus-creations/key-light-controller/blob/main/docs/BUILD.md
+    about: Parts, assembly, flashing and first power-up. Many build questions are answered here.
+  - name: User Guide
+    url: https://github.com/lautus-creations/key-light-controller/blob/main/docs/USER_GUIDE.md
+    about: Screens, settings, faults and diagnostics.
